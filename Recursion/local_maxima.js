@@ -10,15 +10,17 @@ function runProgram(n) {
     }
 }
 function localMaxima(counts, values, localMax) {
+    
     if (values.length < 3) {
         console.log("-1");
     }
     else if (counts < values.length) {
-        counts++
+        
         if (values[counts] > values[counts - 1] && values[counts] > values[counts + 1]) {
             //console.log(values[counts]);
             localMax++;
         }
+        counts++
         localMaxima(counts, values, localMax);
     }
     else {
@@ -27,7 +29,7 @@ function localMaxima(counts, values, localMax) {
     }
 }
 runProgram(`2
+2
+2 2
 3
-1 3 4
-10
-884 729 768 201 266 494 597 328 705 287`);
+2 2 1`);
