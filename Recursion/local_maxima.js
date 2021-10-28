@@ -21,10 +21,13 @@ function localMaxima(counts, values, localMax) {
         }
         localMaxima(counts, values, localMax);
     }
-    else console.log(localMax);
+    else {
+        if (localMax > 0) console.log(localMax);
+        else console.log("-1");
+    }
 }
 runProgram(`2
-2
-1 3
+3
+1 3 4
 10
 884 729 768 201 266 494 597 328 705 287`);
